@@ -113,3 +113,4 @@ manage.py migrate
 ```bash
 pytest
 ```
+# django_testing
