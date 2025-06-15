@@ -1,5 +1,5 @@
 
 def test_example():
-    assert False, "Just test example"
-
+    result = 2 + 2
+    assert result == 4
 

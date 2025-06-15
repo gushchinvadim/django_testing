@@ -1,14 +1,17 @@
-from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.viewsets import ModelViewSet
+from rest_framework import viewsets
+from students.models import Course, Student
+from students.serializers import CourseSerializer, StudentSerializer
 
-from students.filters import CourseFilter
-from students.models import Course
-from students.serializers import CourseSerializer
-
-
-class CoursesViewSet(ModelViewSet):
-
+class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
-    filter_backends = (DjangoFilterBackend, )
-    filterset_class = CourseFilter
+
+
+class StudentViewSet(viewsets.ModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+
+
+
+
